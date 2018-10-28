@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 
 import { header } from './header.module.scss'
+import { container } from './container.module.scss'
 
 const Header = ({ siteTitle }) => (
   <div
@@ -11,13 +12,7 @@ const Header = ({ siteTitle }) => (
       marginBottom: '1.45rem',
     }}
   >
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '1.45rem 1.0875rem',
-      }}
-    >
+    <div className={container}>
       <h1 style={{ margin: 0 }}>
         <Link
           to="/"
@@ -32,7 +27,7 @@ const Header = ({ siteTitle }) => (
     </div>
     {/* Nave bar for the UC, the idea is that it has a few simple elements, a home page, about page.*/}
     {/*The nav bar css is stored in the layouts css, i dont think that is correct so im leaving this note */}
-    <nav>
+    <nav className={container}>
       <ul>
          <li>
         <Link to="/">Home</Link>
