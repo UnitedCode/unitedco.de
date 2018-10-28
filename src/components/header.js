@@ -1,8 +1,11 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
+import { header } from './header.module.scss'
+
 const Header = ({ siteTitle }) => (
   <div
+  className={header}
     style={{
       background: 'rebeccapurple',
       marginBottom: '1.45rem',
