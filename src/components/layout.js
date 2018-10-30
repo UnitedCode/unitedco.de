@@ -6,6 +6,7 @@ import { StaticQuery, graphql } from 'gatsby'
 import Header from './header'
 import Footer from './footer'
 import './layout.css'
+import { container } from './container.module.scss'
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -31,11 +32,9 @@ const Layout = ({ children }) => (
         </Helmet>
         <div className="site">
           <Header siteTitle={data.site.siteMetadata.title} />
-          <div
+          <div 
+            className={container}
             style={{
-              margin: '0 auto',
-              maxWidth: 960,
-              padding: '0px 1.0875rem 1.45rem',
               paddingTop: 0,
               flexGrow: 1}}
           >
